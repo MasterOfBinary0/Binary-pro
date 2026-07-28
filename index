@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Master Of Binary — Professional Quotex Trading Signals</title>
+<meta name="description" content="Master Of Binary is a professional Telegram trading community delivering technical analysis, market breakdowns and trade setups for Quotex traders.">
+<meta name="keywords" content="Master Of Binary, Quotex signals, binary options community, trading analysis, Telegram trading">
+<meta name="author" content="Master Of Binary">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Master Of Binary — Professional Quotex Trading Signals">
+<meta property="og:description" content="Join our Telegram trading community and receive professional trading signals, technical analysis and high probability trade setups.">
+<meta property="og:site_name" content="Master Of Binary">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Master Of Binary — Professional Quotex Trading Signals">
+<meta name="twitter:description" content="Professional Quotex trading signals, technical analysis and market breakdowns, delivered daily on Telegram.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Master Of Binary",
+  "description": "Professional Quotex trading signals community on Telegram, delivering technical analysis and trade setups.",
+  "sameAs": ["https://telegram.me/+gxtCXAjKGbAxZTk0"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg-0:#050816;
+  --bg-1:#081221;
+  --bg-2:#0D1728;
+  --primary:#00E676;
+  --secondary:#00C2FF;
+  --accent:#9C6BFF;
+  --danger:#FF4D6D;
+  --text:#FFFFFF;
+  --sub:#B5C2D4;
+
+  --primary-glow: rgba(0,230,118,.35);
+  --secondary-glow: rgba(0,194,255,.30);
+  --accent-glow: rgba(156,107,255,.30);
+
+  --glass-bg: rgba(255,255,255,.04);
+  --glass-border: rgba(255,255,255,.08);
+  --glass-hi: rgba(255,255,255,.12);
+
+  --font-display:'Space Grotesk', sans-serif;
+  --font-body:'Inter', sans-serif;
+  --font-ui:'Poppins', sans-serif;
+
+  --radius-sm:10px;
+  --radius-md:18px;
+  --radius-lg:28px;
+
+  --ease-out: cubic-bezier(.16,1,.3,1);
+  --ease-in-out: cubic-bezier(.65,0,.35,1);
+}
+
+*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+body{
+  background: var(--bg-0);
+  color:var(--text);
+  font-family: var(--font-body);
+  overflow-x:hidden;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; display:block;}
+a{color:inherit; text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit; cursor:pointer; border:none; background:none; color:inherit;}
+.container{ width:min(1240px, 92%); margin:0 auto; }
+::selection{ background:var(--primary); color:#03170D; }
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
+}
+
+::-webkit-scrollbar{ width:8px; }
+::-webkit-scrollbar-track{ background:var(--bg-0); }
+::-webkit-scrollbar-thumb{ background:linear-gradient(var(--primary), var(--secondary)); border-radius:10px; }
+
+.bg-fixed{
+  position:fixed; inset:0; z-index:-3; background:
+    radial-gradient(1200px 700px at 15% -10%, rgba(0,230,118,.10), transparent 60%),
+    radial-gradient(1000px 600px at 90% 10%, rgba(0,194,255,.10), transparent 60%),
+    radial-gradient(900px 700px at 50% 110%, rgba(156,107,255,.10), transparent 60%),
+    linear-gradient(180deg, var(--bg-0), var(--bg-1) 40%, var(--bg-0));
+}
+
+.grid-overlay{
+  position:fixed; inset:0; z-index:-2; opacity:.35;
+  background-image:
+    linear-gradient(rgba(181,194,212,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(181,194,212,.06) 1px, transparent 1px);
+  background-size: 42px 42px;
+  animation: gridDrift 40s linear infinite;
+  mask-image: radial-gradient(circle at 50% 20%, black, transparent 75%);
+}
+@keyframes gridDrift{ 0%{background-position:0 0,0 0;} 100%{background-position:42px 84px, 84px 42px;} }
+
+#particles-canvas{ position:fixed; inset:0; z-index:-1; pointer-events:none; }
+
+.mouse-glow{
+  position:fixed; top:0; left:0; width:520px; height:520px; border-radius:50%;
+  background: radial-gradient(circle, var(--primary-glow), transparent 65%);
+  pointer-events:none; z-index:0; transform:translate(-50%,-50%);
+  filter:blur(10px); transition: opacity .3s ease; opacity:0;
+}
+
+.aurora{ position:fixed; inset:0; z-index:-2; overflow:hidden; pointer-events:none; }
+.aurora span{
+  position:absolute; width:60vw; height:60vw; border-radius:50%; filter:blur(90px); opacity:.18;
+  animation: auroraFloat 22s var(--ease-in-out) infinite;
+}
+.aurora span:nth-child(1){ background:var(--primary); top:-20%; left:-10%; }
+.aurora span:nth-child(2){ background:var(--secondary); top:10%; right:-15%; animation-delay:-7s; }
+.aurora span:nth-child(3){ background:var(--accent); bottom:-25%; left:30%; animation-delay:-14s; }
+@keyframes auroraFloat{
+  0%,100%{ transform: translate(0,0) scale(1); }
+  33%{ transform: translate(6%, 8%) scale(1.1); }
+  66%{ transform: translate(-8%, -4%) scale(.95); }
+}
+
+/* ==========================================================================
+   2. NAVBAR
+   ========================================================================== */
+.navbar{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  padding:20px 0;
+  transition: padding .35s var(--ease-out), background .35s var(--ease-out), border-color .35s var(--ease-out);
+  border-bottom:1px solid transparent;
+}
+.navbar.scrolled{
+  padding:12px 0;
+  background:rgba(5,8,22,.75);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border-bottom:1px solid var(--glass-border);
+}
+.navbar .container{ display:flex; align-items:center; justify-content:space-between; }
+.brand{ display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-weight:700; font-size:1.25rem; letter-spacing:.2px; }
+.brand-mark{
+  width:38px; height:38px; border-radius:11px; position:relative;
+  background: linear-gradient(145deg, var(--bg-2), var(--bg-1));
+  border:1px solid var(--glass-border);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.02) inset, 0 8px 24px -8px var(--primary-glow);
+}
+.brand-mark svg{ width:20px; height:20px; }
+.brand-name b{ color:var(--primary); }
+
+.nav-links{ display:flex; align-items:center; gap:34px; }
+.nav-links a{
+  font-family:var(--font-ui); font-size:.92rem; font-weight:500; color:var(--sub);
+  position:relative; padding:4px 0; transition:color .25s ease;
+}
+.nav-links a::after{
+  content:''; position:absolute; left:0; bottom:-2px; width:0; height:1.5px;
+  background:linear-gradient(90deg, var(--primary), var(--secondary));
+  transition:width .3s var(--ease-out);
+}
+.nav-links a:hover{ color:var(--text); }
+.nav-links a:hover::after{ width:100%; }
+
+.nav-cta{ display:flex; align-items:center; gap:14px; }
+.burger{ display:none; width:26px; height:20px; position:relative; }
+.burger span{ position:absolute; left:0; width:100%; height:2px; background:var(--text); border-radius:2px; transition:.3s var(--ease-out); }
+.burger span:nth-child(1){ top:0; } .burger span:nth-child(2){ top:9px; } .burger span:nth-child(3){ top:18px; }
+.burger.active span:nth-child(1){ transform:translateY(9px) rotate(45deg); }
+.burger.active span:nth-child(2){ opacity:0; }
+.burger.active span:nth-child(3){ transform:translateY(-9px) rotate(-45deg); }
+
+.mobile-menu{
+  position:fixed; top:0; right:-100%; width:min(80vw,340px); height:100vh; z-index:99;
+  background:var(--bg-1); border-left:1px solid var(--glass-border);
+  padding:100px 32px 32px; transition:right .4s var(--ease-out); display:flex; flex-direction:column; gap:26px;
+}
+.mobile-menu.open{ right:0; }
+.mobile-menu a{ font-family:var(--font-ui); font-size:1.05rem; color:var(--sub); }
+.mobile-menu a:hover{ color:var(--primary); }
+
+/* ==========================================================================
+   3. BUTTONS
+   ========================================================================== */
+.btn{
+  position:relative; overflow:hidden; display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  font-family:var(--font-ui); font-weight:600; font-size:.92rem; letter-spacing:.2px;
+  padding:15px 28px; border-radius:100px; transition: transform .35s var(--ease-out), box-shadow .35s var(--ease-out);
+  white-space:nowrap;
+}
+.btn:active{ transform:scale(.97); }
+.btn-primary{
+  background:linear-gradient(135deg, var(--primary), #00c268);
+  color:#03170D;
+  box-shadow: 0 8px 28px -6px var(--primary-glow), inset 0 1px 0 rgba(255,255,255,.35);
+}
+.btn-primary:hover{ transform:translateY(-3px); box-shadow:0 14px 34px -6px var(--primary-glow), inset 0 1px 0 rgba(255,255,255,.4); }
+.btn-ghost{
+  background:var(--glass-bg); color:var(--text); border:1px solid var(--glass-border);
+  backdrop-filter:blur(10px);
+}
+.btn-ghost:hover{ border-color:rgba(255,255,255,.25); transform:translateY(-3px); background:rgba(255,255,255,.07); }
+.btn-sm{ padding:11px 20px; font-size:.85rem; }
+
+.btn .ripple{
+  position:absolute; border-radius:50%; background:rgba(255,255,255,.5); transform:scale(0);
+  animation: rippleAnim .6s var(--ease-out); pointer-events:none;
+}
+@keyframes rippleAnim{ to{ transform:scale(3.2); opacity:0; } }
+
+.btn-icon{ width:18px; height:18px; }
+
+/* ==========================================================================
+   4. GLASS / CARD PRIMITIVES
+   ========================================================================== */
+.glass{
+  background:var(--glass-bg);
+  border:1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  position:relative;
+}
+.glass::before{
+  content:''; position:absolute; inset:0; border-radius:inherit; padding:1px;
+  background:linear-gradient(160deg, rgba(255,255,255,.18), rgba(255,255,255,0) 40%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  pointer-events:none;
+}
+.hover-card{ transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out), border-color .45s var(--ease-out); }
+.hover-card:hover{
+  transform: translateY(-8px);
+  border-color: rgba(255,255,255,.18);
+  box-shadow: 0 26px 50px -20px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.03);
+}
+
+.badge{
+  display:inline-flex; align-items:center; gap:8px; font-family:var(--font-ui); font-size:.78rem; font-weight:600;
+  padding:8px 16px; border-radius:100px; letter-spacing:.4px; text-transform:uppercase;
+  background:var(--glass-bg); border:1px solid var(--glass-border); color:var(--sub);
+}
+.badge .dot{ width:7px; height:7px; border-radius:50%; background:var(--primary); box-shadow:0 0 10px var(--primary); animation:pulseDot 1.6s ease-in-out infinite; }
+@keyframes pulseDot{ 0%,100%{ opacity:1; } 50%{ opacity:.35; } }
+
+.eyebrow{ color:var(--secondary); font-family:var(--font-ui); font-weight:600; font-size:.8rem; letter-spacing:2.5px; text-transform:uppercase; }
+
+.section{ padding:120px 0; position:relative; }
+.section-head{ max-width:640px; margin-bottom:64px; }
+.section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:600; line-height:1.15; }
+h2{ font-size:clamp(2rem, 4vw, 3rem); margin-top:14px; }
+h2 span, h1 span{ background:linear-gradient(100deg, var(--primary), var(--secondary)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.section-head p{ color:var(--sub); margin-top:18px; font-size:1.05rem; }
+
+.neon-border{
+  border:1px solid transparent; border-radius:var(--radius-md);
+  background: linear-gradient(var(--bg-1), var(--bg-1)) padding-box, linear-gradient(120deg, var(--primary), var(--secondary), var(--accent)) border-box;
+}
+
+/* scroll reveal */
+.reveal{ opacity:0; transform:translateY(36px); transition:opacity .8s var(--ease-out), transform .8s var(--ease-out); }
+.reveal.in{ opacity:1; transform:translateY(0); }
+
+/* ==========================================================================
+   5. HERO
+   ========================================================================== */
+.hero{ padding:180px 0 40px; position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:center; }
+.hero-grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:60px; align-items:center; flex-shrink:0; }
+.hero-copy .badge{ margin-bottom:26px; }
+.hero-copy h1{ font-size:clamp(2.6rem, 5.2vw, 4.4rem); letter-spacing:-1px; }
+.hero-copy p.lead{ color:var(--sub); font-size:1.12rem; max-width:520px; margin:26px 0 38px; }
+.hero-actions{ display:flex; gap:16px; flex-wrap:wrap; }
+
+.hero-stats{ display:flex; gap:40px; margin-top:56px; flex-wrap:wrap; }
+.hero-stats div b{
+  display:block; font-family:var(--font-display); font-size:1.8rem; font-weight:700;
+  background:linear-gradient(100deg,var(--text), var(--secondary)); -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.hero-stats div span{ color:var(--sub); font-size:.82rem; font-family:var(--font-ui); }
+
+/* Trading dashboard visual */
+.hero-visual{ position:relative; height:560px; }
+.dash-main{
+  position:absolute; inset:0; border-radius:var(--radius-lg); overflow:hidden; padding:22px;
+  display:flex; flex-direction:column; gap:16px;
+  box-shadow: 0 40px 90px -30px rgba(0,0,0,.7);
+}
+.dash-top{ display:flex; align-items:center; justify-content:space-between; }
+.dash-pair{ display:flex; align-items:center; gap:10px; font-family:var(--font-ui); font-weight:600; }
+.dash-pair .icon-dot{ width:10px; height:10px; border-radius:50%; background:var(--primary); box-shadow:0 0 12px var(--primary); }
+.dash-price{ text-align:right; }
+.dash-price b{ font-family:var(--font-display); font-size:1.3rem; color:var(--primary); }
+.dash-price span{ display:block; font-size:.75rem; color:var(--sub); }
+
+.chart-wrap{ position:relative; flex:1; border-radius:var(--radius-sm); background:rgba(255,255,255,.02); overflow:hidden; }
+#candles-canvas{ width:100%; height:100%; display:block; }
+.chart-line-svg{ position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+
+.dash-widgets{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+.mini-widget{ padding:14px; border-radius:var(--radius-sm); }
+.mini-widget span{ display:block; color:var(--sub); font-size:.72rem; font-family:var(--font-ui); }
+.mini-widget b{ font-family:var(--font-display); font-size:1.05rem; }
+.mini-widget b.up{ color:var(--primary); } .mini-widget b.down{ color:var(--danger); }
+
+.float-card{
+  position:absolute; padding:14px 18px; border-radius:16px; display:flex; align-items:center; gap:12px;
+  animation: floatY 5s var(--ease-in-out) infinite;
+  box-shadow:0 20px 45px -18px rgba(0,0,0,.65);
+}
+.float-card.c1{ top:-6%; right:-8%; animation-delay:0s; }
+.float-card.c2{ bottom:6%; left:-10%; animation-delay:-2s; }
+.float-card .fc-ic{ width:34px; height:34px; border-radius:10px; display:flex; align-items:center; justify-content:center; }
+.float-card .fc-ic.green{ background:rgba(0,230,118,.15); color:var(--primary); }
+.float-card .fc-ic.red{ background:rgba(255,77,109,.15); color:var(--danger); }
+.float-card b{ font-family:var(--font-display); font-size:.95rem; display:block; }
+.float-card span{ font-size:.72rem; color:var(--sub); }
+@keyframes floatY{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-14px);} }
+
+.float-coin{
+  position:absolute; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-display); font-weight:700; font-size:.8rem; color:var(--bg-0);
+  background:linear-gradient(145deg, var(--primary), var(--secondary));
+  box-shadow:0 10px 26px -8px var(--primary-glow);
+  animation: coinFloat 7s var(--ease-in-out) infinite;
+}
+@keyframes coinFloat{ 0%,100%{ transform:translateY(0) rotate(0deg);} 50%{ transform:translateY(-22px) rotate(12deg);} }
+
+/* marquee ticker */
+.ticker-strip{ border-top:1px solid var(--glass-border); border-bottom:1px solid var(--glass-border); padding:16px 0; overflow:hidden; background:rgba(255,255,255,.02); width:100%; flex-shrink:0; }
+.ticker-track{ display:flex; gap:52px; width:max-content; animation:tickerScroll 32s linear infinite; }
+.ticker-item{ display:flex; align-items:center; gap:8px; font-family:var(--font-ui); font-size:.88rem; color:var(--sub); white-space:nowrap; }
+.ticker-item b{ color:var(--text); }
+.ticker-item .up{ color:var(--primary); } .ticker-item .down{ color:var(--danger); }
+@keyframes tickerScroll{ from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
+
+/* ==========================================================================
+   6. STATS SECTION
+   ========================================================================== */
+.stats-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+.stat-card{ padding:34px 26px; border-radius:var(--radius-md); text-align:center; }
+.stat-card .icon-wrap{ width:52px; height:52px; margin:0 auto 18px; border-radius:14px; display:flex; align-items:center; justify-content:center; background:rgba(0,230,118,.1); color:var(--primary); }
+.stat-card b{ display:block; font-family:var(--font-display); font-size:2.2rem; font-weight:700; }
+.stat-card span{ color:var(--sub); font-family:var(--font-ui); font-size:.85rem; }
+
+/* ==========================================================================
+   7. FEATURES
+   ========================================================================== */
+.feature-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
+.feature-card{ padding:34px; border-radius:var(--radius-md); }
+.feature-card .f-icon{
+  width:54px; height:54px; border-radius:15px; display:flex; align-items:center; justify-content:center; margin-bottom:22px;
+  background:linear-gradient(145deg, rgba(0,230,118,.15), rgba(0,194,255,.08)); color:var(--primary);
+  border:1px solid var(--glass-border);
+}
+.feature-card h3{ font-size:1.15rem; margin-bottom:10px; }
+.feature-card p{ color:var(--sub); font-size:.95rem; }
+
+/* ==========================================================================
+   8. ADVANTAGES (split layout)
+   ========================================================================== */
+.adv-grid{ display:grid; grid-template-columns:.9fr 1.1fr; gap:70px; align-items:center; }
+.adv-list{ display:flex; flex-direction:column; gap:22px; margin-top:30px; }
+.adv-item{ display:flex; gap:18px; padding:20px; border-radius:var(--radius-md); }
+.adv-item .num{ font-family:var(--font-display); font-size:1.6rem; font-weight:700; color:var(--secondary); opacity:.5; min-width:40px; }
+.adv-item h4{ font-size:1.05rem; margin-bottom:6px; }
+.adv-item p{ color:var(--sub); font-size:.9rem; }
+
+.adv-visual{ position:relative; height:480px; border-radius:var(--radius-lg); overflow:hidden; padding:26px; }
+.progress-row{ margin-bottom:22px; }
+.progress-row .pr-top{ display:flex; justify-content:space-between; font-family:var(--font-ui); font-size:.85rem; margin-bottom:8px; color:var(--sub); }
+.progress-track{ height:8px; border-radius:10px; background:rgba(255,255,255,.06); overflow:hidden; }
+.progress-fill{ height:100%; border-radius:10px; background:linear-gradient(90deg, var(--primary), var(--secondary)); width:0; transition:width 1.4s var(--ease-out); box-shadow:0 0 14px var(--primary-glow); }
+
+/* ==========================================================================
+   9. MARKET ANALYSIS (SVG chart)
+   ========================================================================== */
+.market-panel{ padding:30px; border-radius:var(--radius-lg); }
+.market-tabs{ display:flex; gap:10px; margin-bottom:24px; flex-wrap:wrap; }
+.m-tab{ padding:10px 18px; border-radius:100px; font-family:var(--font-ui); font-size:.82rem; font-weight:600; color:var(--sub); border:1px solid var(--glass-border); transition:.3s; }
+.m-tab.active, .m-tab:hover{ color:var(--bg-0); background:linear-gradient(135deg,var(--primary),var(--secondary)); border-color:transparent; }
+.market-chart{ height:340px; position:relative; border-radius:var(--radius-sm); background:rgba(255,255,255,.02); }
+#analysis-svg{ width:100%; height:100%; }
+.chart-path{ fill:none; stroke:var(--primary); stroke-width:2.4; stroke-linecap:round; filter: drop-shadow(0 0 6px var(--primary-glow)); }
+.chart-area{ opacity:.18; }
+.chart-dot{ fill:var(--bg-0); stroke:var(--primary); stroke-width:2.4; }
+
+/* ==========================================================================
+   10. PERFORMANCE CARDS
+   ========================================================================== */
+.perf-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.perf-card{ padding:30px; border-radius:var(--radius-md); position:relative; overflow:hidden; }
+.perf-card .p-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; }
+.perf-card h3{ font-size:1.05rem; }
+.perf-card .tag{ font-size:.7rem; font-family:var(--font-ui); font-weight:700; padding:5px 12px; border-radius:100px; text-transform:uppercase; }
+.tag.win{ background:rgba(0,230,118,.15); color:var(--primary); }
+.perf-mini-chart{ height:70px; margin:14px 0; }
+.perf-card .p-foot{ display:flex; justify-content:space-between; font-family:var(--font-ui); font-size:.82rem; color:var(--sub); }
+.perf-card .p-foot b{ color:var(--text); font-size:1.05rem; display:block; font-family:var(--font-display); }
+
+/* ==========================================================================
+   11. TIMELINE / HOW IT WORKS
+   ========================================================================== */
+.timeline{ position:relative; max-width:900px; margin:0 auto; }
+.timeline::before{
+  content:''; position:absolute; left:29px; top:10px; bottom:10px; width:2px;
+  background:linear-gradient(var(--primary), var(--secondary), var(--accent)); opacity:.4;
+}
+.tl-item{ display:flex; gap:28px; padding-bottom:52px; position:relative; }
+.tl-item:last-child{ padding-bottom:0; }
+.tl-dot{
+  min-width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-display); font-weight:700; font-size:1.2rem; z-index:1;
+  background:var(--bg-1); border:1px solid var(--glass-border);
+}
+.tl-item.active .tl-dot{ background:linear-gradient(135deg,var(--primary),var(--secondary)); color:var(--bg-0); box-shadow:0 0 22px var(--primary-glow); }
+.tl-content{ padding-top:8px; }
+.tl-content h4{ font-size:1.15rem; margin-bottom:8px; }
+.tl-content p{ color:var(--sub); font-size:.94rem; max-width:520px; }
+
+/* ==========================================================================
+   12. TESTIMONIALS
+   ========================================================================== */
+.test-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.test-card{ padding:28px; border-radius:var(--radius-md); }
+.test-stars{ color:var(--secondary); margin-bottom:16px; letter-spacing:3px; }
+.test-card p{ color:var(--sub); font-size:.94rem; margin-bottom:22px; }
+.test-user{ display:flex; align-items:center; gap:12px; }
+.test-avatar{
+  width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-display); font-weight:700; background:linear-gradient(135deg, var(--accent), var(--secondary)); color:#fff;
+}
+.test-user b{ display:block; font-size:.9rem; }
+.test-user span{ font-size:.76rem; color:var(--sub); }
+
+/* ==========================================================================
+   13. FAQ
+   ========================================================================== */
+.faq-list{ max-width:800px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+.faq-item{ border-radius:var(--radius-md); overflow:hidden; }
+.faq-q{ display:flex; align-items:center; justify-content:space-between; padding:22px 26px; font-family:var(--font-ui); font-weight:600; font-size:.98rem; }
+.faq-q .plus{ width:22px; height:22px; position:relative; flex-shrink:0; margin-left:20px; }
+.faq-q .plus::before, .faq-q .plus::after{ content:''; position:absolute; background:var(--secondary); border-radius:2px; transition:.35s var(--ease-out); }
+.faq-q .plus::before{ width:100%; height:2px; top:50%; left:0; transform:translateY(-50%); }
+.faq-q .plus::after{ width:2px; height:100%; left:50%; top:0; transform:translateX(-50%); }
+.faq-item.open .plus::after{ transform:translateX(-50%) rotate(90deg); opacity:0; }
+.faq-a{ max-height:0; overflow:hidden; transition:max-height .4s var(--ease-out); }
+.faq-a p{ padding:0 26px 24px; color:var(--sub); font-size:.92rem; }
+
+/* ==========================================================================
+   14. CTA BANNER
+   ========================================================================== */
+.cta-banner{ padding:80px; border-radius:var(--radius-lg); text-align:center; position:relative; overflow:hidden; }
+.cta-banner h2{ margin-top:0; }
+.cta-banner p{ color:var(--sub); max-width:560px; margin:18px auto 34px; }
+.cta-glow{ position:absolute; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle, var(--primary-glow), transparent 70%); top:-200px; left:50%; transform:translateX(-50%); pointer-events:none; }
+
+/* ==========================================================================
+   15. FOOTER
+   ========================================================================== */
+footer{ padding:80px 0 30px; border-top:1px solid var(--glass-border); }
+.footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:50px; margin-bottom:60px; }
+.footer-brand p{ color:var(--sub); font-size:.9rem; margin:18px 0 22px; max-width:280px; }
+.footer-col h5{ font-family:var(--font-ui); font-size:.85rem; margin-bottom:18px; letter-spacing:.5px; }
+.footer-col ul{ display:flex; flex-direction:column; gap:12px; }
+.footer-col a{ color:var(--sub); font-size:.88rem; transition:color .25s; }
+.footer-col a:hover{ color:var(--primary); }
+.social-row{ display:flex; gap:12px; }
+.social-row a{ width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; background:var(--glass-bg); border:1px solid var(--glass-border); transition:.3s; }
+.social-row a:hover{ background:var(--primary); color:var(--bg-0); transform:translateY(-3px); }
+.footer-bottom{ display:flex; justify-content:space-between; align-items:center; padding-top:26px; border-top:1px solid var(--glass-border); flex-wrap:wrap; gap:14px; }
+.footer-bottom p{ color:var(--sub); font-size:.82rem; }
+.footer-bottom .legal{ display:flex; gap:22px; }
+.footer-bottom .legal a{ color:var(--sub); font-size:.82rem; }
+.footer-bottom .legal a:hover{ color:var(--text); }
+
+.risk-note{ font-size:.78rem; color:var(--sub); opacity:.7; max-width:900px; margin:20px auto 0; text-align:center; line-height:1.7; }
+
+/* Loading screen */
+#loader{ position:fixed; inset:0; background:var(--bg-0); z-index:9999; display:flex; align-items:center; justify-content:center; transition:opacity .6s var(--ease-out), visibility .6s; }
+#loader.hidden{ opacity:0; visibility:hidden; }
+.loader-mark{ width:64px; height:64px; border-radius:18px; position:relative; display:flex; align-items:center; justify-content:center; background:var(--bg-1); border:1px solid var(--glass-border); }
+.loader-mark::before{
+  content:''; position:absolute; inset:-4px; border-radius:22px; padding:2px;
+  background:conic-gradient(var(--primary), var(--secondary), var(--accent), var(--primary));
+  -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude; animation: spin 1.4s linear infinite;
+}
+@keyframes spin{ to{ transform:rotate(360deg); } }
+
+/* ==========================================================================
+   16. RESPONSIVE
+   ========================================================================== */
+@media (max-width: 1080px){
+  .hero-grid{ grid-template-columns:1fr; }
+  .hero-visual{ height:480px; order:-1; }
+  .adv-grid{ grid-template-columns:1fr; }
+  .stats-grid{ grid-template-columns:repeat(2,1fr); }
+  .feature-grid, .perf-grid, .test-grid{ grid-template-columns:repeat(2,1fr); }
+  .footer-grid{ grid-template-columns:1fr 1fr; }
+}
+@media (max-width: 860px){
+  .nav-links{ display:none; }
+  .burger{ display:block; }
+  .cta-banner{ padding:52px 26px; }
+}
+@media (max-width: 640px){
+  .section{ padding:80px 0; }
+  .hero{ padding:140px 0 60px; }
+  .stats-grid, .feature-grid, .perf-grid, .test-grid{ grid-template-columns:1fr; }
+  .footer-grid{ grid-template-columns:1fr; gap:36px; }
+  .footer-bottom{ flex-direction:column; align-items:flex-start; }
+  .dash-widgets{ grid-template-columns:1fr 1fr; }
+  .hero-stats{ gap:26px; }
+  .adv-item{ flex-direction:column; }
+}
+
+/* keyboard focus visibility */
+a:focus-visible, button:focus-visible, .m-tab:focus-visible{
+  outline:2px solid var(--secondary); outline-offset:3px; border-radius:6px;
+}
+</style>
+</head>
+<body>
+
+<!-- Loading Animation -->
+<div id="loader"><div class="loader-mark">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-9" stroke="#00E676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div></div>
+
+<!-- Global animated backdrop -->
+<div class="bg-fixed"></div>
+<div class="grid-overlay"></div>
+<div class="aurora"><span></span><span></span><span></span></div>
+<canvas id="particles-canvas"></canvas>
+<div class="mouse-glow" id="mouseGlow"></div>
+
+<!-- ============================ NAVBAR ============================ -->
+<header class="navbar" id="navbar">
+  <div class="container">
+    <a href="#home" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 18l5-6 4 3 7-9" stroke="#00E676" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 6h6v6" stroke="#00C2FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand-name">Master <b>Of Binary</b></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#analysis">Analysis</a>
+      <a href="#performance">Performance</a>
+      <a href="#how">How It Works</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://telegram.me/+gxtCXAjKGbAxZTk0" target="_blank" rel="noopener" class="btn btn-primary btn-sm js-ripple">Join Telegram</a>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#features">Features</a>
+  <a href="#analysis">Analysis</a>
+  <a href="#performance">Performance</a>
+  <a href="#how">How It Works</a>
+  <a href="#testimonials">Reviews</a>
+  <a href="#faq">FAQ</a>
+  <a href="https://telegram.me/+gxtCXAjKGbAxZTk0" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:10px;">Join Telegram</a>
+</div>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <span class="badge"><span class="dot"></span> Live Market Coverage · Telegram Community</span>
+      <h1>Master Of Binary</h1>
+      <h1 style="font-size:clamp(1.3rem,2.4vw,1.9rem); margin-top:6px;"><span>Professional Quotex Trading Signals</span></h1>
+      <p class="lead">Join our Telegram trading community and receive professional trading signals, technical analysis and high probability trade setups — built for traders who take their Quotex sessions seriously.</p>
+      <div class="hero-actions">
+        <a href="https://telegram.me/+gxtCXAjKGbAxZTk0" target="_blank" rel="noopener" class="btn btn-primary js-ripple">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none"><path d="M21 4L2.5 11.5c-1 .4-1 1.6.1 1.9l4.4 1.4 1.7 5.4c.3 1 1.6 1.2 2.2.4l2.6-3.2 4.6 3.4c.9.6 2.1.1 2.3-.9L23 5.2c.2-1-.9-1.7-1.9-1.2z" fill="currentColor"/></svg>
+          Join Telegram
+        </a>
+        <a href="#analysis" class="btn btn-ghost js-ripple">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none"><path d="M4 19V10M10 19V5M16 19v-7M22 19H2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Market Analysis
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div><b class="counter" data-target="18400">0</b><span>Community Members</span></div>
+        <div><b class="counter" data-target="240">0</b><span>Setups Shared Monthly</span></div>
+        <div><b class="counter" data-target="24">0</b><span>Hours Market Coverage</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="float-coin" style="width:46px;height:46px;top:8%;left:6%;">Q</div>
+      <div class="float-coin" style="width:32px;height:32px;bottom:14%;right:2%;animation-delay:-3s;">B</div>
+
+      <div class="dash-main glass">
+        <div class="dash-top">
+          <div class="dash-pair"><span class="icon-dot"></span> EUR/USD OTC</div>
+          <div class="dash-price"><b id="livePrice">1.08452</b><span id="liveChange">+0.14%</span></div>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="candles-canvas"></canvas>
+          <svg class="chart-line-svg" id="chart-line-svg" viewBox="0 0 600 240" preserveAspectRatio="none"></svg>
+        </div>
+        <div class="dash-widgets">
+          <div class="mini-widget glass"><span>RSI (14)</span><b class="up">62.4</b></div>
+          <div class="mini-widget glass"><span>Trend</span><b class="up">Bullish</b></div>
+          <div class="mini-widget glass"><span>Volatility</span><b>Medium</b></div>
+        </div>
+      </div>
+
+      <div class="float-card glass c1">
+        <div class="fc-ic green">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 19V10M10 19V5M16 19v-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div><b>Setup Confirmed</b><span>CALL · GBP/JPY</span></div>
+      </div>
+      <div class="float-card glass c2">
+        <div class="fc-ic red">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div><b>Risk Alert</b><span>High volatility · USD news</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker-strip" style="margin-top:80px;">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+</section>
+
+<!-- ============================ STATS ============================ -->
+<section class="section" id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card glass hover-card reveal">
+        <div class="icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 6 6 .9-4.5 4.4 1 6.2L12 16.8 6.5 19.5l1-6.2L3 8.9 9 8z" fill="currentColor"/></svg></div>
+        <b class="counter" data-target="18400">0</b>
+        <span>Active Community Members</span>
+      </div>
+      <div class="stat-card glass hover-card reveal">
+        <div class="icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 3v18h18M7 15l4-4 3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <b class="counter" data-target="6" data-suffix=" yrs">0</b>
+        <span>Years Analyzing Markets</span>
+      </div>
+      <div class="stat-card glass hover-card reveal">
+        <div class="icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <b class="counter" data-target="24" data-suffix="/7">0</b>
+        <span>Market Session Coverage</span>
+      </div>
+      <div class="stat-card glass hover-card reveal">
+        <div class="icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="2"/><path d="M8 16l3-4 2 2 4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <b class="counter" data-target="240" data-suffix="+">0</b>
+        <span>Setups Shared Monthly</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FEATURES ============================ -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Why Traders Stay</span>
+      <h2>Built for serious <span>Quotex traders</span></h2>
+      <p>Every feature in our community is designed to help you read the market with more context, not less — so you can make your own informed decisions.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card glass hover-card reveal">
+        <div class="f-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l3-8 4 16 3-8h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Technical Analysis Breakdown</h3>
+        <p>Daily chart breakdowns covering trend structure, support &amp; resistance zones, and momentum indicators explained in plain language.</p>
+      </div>
+      <div class="feature-card glass hover-card reveal">
+        <div class="f-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>Risk-Aware Setups</h3>
+        <p>Every setup is shared with context on volatility and news events, so you understand the conditions behind each trade idea.</p>
+      </div>
+      <div class="feature-card glass hover-card reveal">
+        <div class="f-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 20V10M18 20V4M6 20v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Live Session Coverage</h3>
+        <p>Our team tracks major sessions throughout the day, flagging high-probability windows as market conditions develop.</p>
+      </div>
+      <div class="feature-card glass hover-card reveal">
+        <div class="f-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>Structured Education</h3>
+        <p>Guides on chart patterns, indicator combinations and trading psychology to help you build your own independent process.</p>
+      </div>
+      <div class="feature-card glass hover-card reveal">
+        <div class="f-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Active Trader Community</h3>
+        <p>Discuss setups, share your own analysis and learn alongside thousands of other Quotex traders in real time.</p>
+      </div>
+      <div class="feature-card glass hover-card reveal">
+        <div class="f-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>Transparent Track Record</h3>
+        <p>We post our reasoning alongside every call, win or lose, so you can evaluate our process honestly over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ADVANTAGES ============================ -->
+<section class="section" id="advantages">
+  <div class="container adv-grid">
+    <div class="reveal">
+      <span class="eyebrow">The Difference</span>
+      <h2>Signals backed by <span>real methodology</span></h2>
+      <p style="color:var(--sub); margin-top:16px;">We don't just send arrows on a chart. Every setup comes from a repeatable process rooted in price action and confluence — so you learn the "why," not just the "what."</p>
+      <div class="adv-list">
+        <div class="adv-item glass hover-card">
+          <span class="num">01</span>
+          <div><h4>Multi-Timeframe Confirmation</h4><p>Setups are cross-checked across timeframes before they're shared with the community.</p></div>
+        </div>
+        <div class="adv-item glass hover-card">
+          <span class="num">02</span>
+          <div><h4>News &amp; Volatility Filter</h4><p>We flag high-impact news windows so you know when conditions are less predictable.</p></div>
+        </div>
+        <div class="adv-item glass hover-card">
+          <span class="num">03</span>
+          <div><h4>Full Reasoning, Always</h4><p>Every call includes the structure behind it — support/resistance, trend, and momentum context.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="adv-visual glass reveal">
+      <h4 style="margin-bottom:26px; font-size:1.05rem;">Community Focus Areas</h4>
+      <div class="progress-row">
+        <div class="pr-top"><span>Technical Analysis</span><span>92%</span></div>
+        <div class="progress-track"><div class="progress-fill" data-width="92%"></div></div>
+      </div>
+      <div class="progress-row">
+        <div class="pr-top"><span>Risk Management Education</span><span>87%</span></div>
+        <div class="progress-track"><div class="progress-fill" data-width="87%"></div></div>
+      </div>
+      <div class="progress-row">
+        <div class="pr-top"><span>Live Session Coverage</span><span>95%</span></div>
+        <div class="progress-track"><div class="progress-fill" data-width="95%"></div></div>
+      </div>
+      <div class="progress-row">
+        <div class="pr-top"><span>Trader Psychology</span><span>78%</span></div>
+        <div class="progress-track"><div class="progress-fill" data-width="78%"></div></div>
+      </div>
+      <div class="progress-row" style="margin-bottom:0;">
+        <div class="pr-top"><span>Community Discussion</span><span>90%</span></div>
+        <div class="progress-track"><div class="progress-fill" data-width="90%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ MARKET ANALYSIS ============================ -->
+<section class="section" id="analysis">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Live Coverage</span>
+      <h2>Market <span>analysis</span> dashboard</h2>
+      <p>A sample of how we visualize structure before every setup — trend, momentum, and key levels in one view.</p>
+    </div>
+    <div class="market-panel glass reveal">
+      <div class="market-tabs">
+        <button class="m-tab active" data-pair="EUR/USD">EUR/USD</button>
+        <button class="m-tab" data-pair="GBP/JPY">GBP/JPY</button>
+        <button class="m-tab" data-pair="BTC/USD">BTC/USD</button>
+        <button class="m-tab" data-pair="AUD/CAD">AUD/CAD</button>
+      </div>
+      <div class="market-chart">
+        <svg id="analysis-svg" viewBox="0 0 1000 340" preserveAspectRatio="none"></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PERFORMANCE ============================ -->
+<section class="section" id="performance">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Recent Activity</span>
+      <h2>Sample <span>setup breakdowns</span></h2>
+      <p>Illustrative examples of how a setup is documented and discussed inside the community.</p>
+    </div>
+    <div class="perf-grid">
+      <div class="perf-card glass hover-card reveal">
+        <div class="p-head"><h3>EUR/USD OTC</h3><span class="tag win">Bullish Structure</span></div>
+        <div class="perf-mini-chart"><svg viewBox="0 0 300 70" class="mini-chart-svg" data-seed="1"></svg></div>
+        <div class="p-foot"><div><b>M15</b>Timeframe</div><div><b>Support</b>Reaction</div><div><b>CALL</b>Bias</div></div>
+      </div>
+      <div class="perf-card glass hover-card reveal">
+        <div class="p-head"><h3>GBP/JPY</h3><span class="tag win">Trend Continuation</span></div>
+        <div class="perf-mini-chart"><svg viewBox="0 0 300 70" class="mini-chart-svg" data-seed="2"></svg></div>
+        <div class="p-foot"><div><b>M5</b>Timeframe</div><div><b>Momentum</b>Confluence</div><div><b>CALL</b>Bias</div></div>
+      </div>
+      <div class="perf-card glass hover-card reveal">
+        <div class="p-head"><h3>BTC/USD</h3><span class="tag win">Range Rejection</span></div>
+        <div class="perf-mini-chart"><svg viewBox="0 0 300 70" class="mini-chart-svg" data-seed="3"></svg></div>
+        <div class="p-foot"><div><b>H1</b>Timeframe</div><div><b>Resistance</b>Reaction</div><div><b>PUT</b>Bias</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HOW IT WORKS ============================ -->
+<section class="section" id="how">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Getting Started</span>
+      <h2>How the <span>community works</span></h2>
+      <p>From joining Telegram to reading your first setup breakdown — here's what to expect.</p>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-item active">
+        <div class="tl-dot">1</div>
+        <div class="tl-content"><h4>Join the Telegram Channel</h4><p>Tap "Join Telegram" and request access — it takes less than a minute to get in.</p></div>
+      </div>
+      <div class="tl-item active">
+        <div class="tl-dot">2</div>
+        <div class="tl-content"><h4>Read the Onboarding Pinned Post</h4><p>We walk you through how setups are formatted, our risk-flagging system, and community guidelines.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">3</div>
+        <div class="tl-content"><h4>Follow Daily Market Breakdowns</h4><p>Each session opens with a structure overview — trend, key levels, and what we're watching for.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">4</div>
+        <div class="tl-content"><h4>Study the Reasoning, Not Just the Call</h4><p>Use every setup as a learning example so you can eventually build your own independent read on the market.</p></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">5</div>
+        <div class="tl-content"><h4>Discuss &amp; Ask Questions</h4><p>Engage with the community and our analysts to sharpen your understanding session by session.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TESTIMONIALS ============================ -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Community Voices</span>
+      <h2>What <span>members</span> say</h2>
+      <p>Feedback shared by members of the Master Of Binary Telegram community.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card glass hover-card reveal">
+        <div class="test-stars">★★★★★</div>
+        <p>"The breakdowns actually explain the structure behind each setup. I've learned more reading the pinned analysis than anywhere else."</p>
+        <div class="test-user"><div class="test-avatar">R</div><div><b>Rafael M.</b><span>Member since 2024</span></div></div>
+      </div>
+      <div class="test-card glass hover-card reveal">
+        <div class="test-stars">★★★★★</div>
+        <p>"Appreciate that risk and volatility get called out honestly instead of just posting arrows on a chart."</p>
+        <div class="test-user"><div class="test-avatar">S</div><div><b>Sara K.</b><span>Member since 2023</span></div></div>
+      </div>
+      <div class="test-card glass hover-card reveal">
+        <div class="test-stars">★★★★★</div>
+        <p>"Good community to discuss setups with. The daily session coverage keeps me on schedule with the market."</p>
+        <div class="test-user"><div class="test-avatar">D</div><div><b>Daniyar T.</b><span>Member since 2024</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Questions</span>
+      <h2>Frequently <span>asked questions</span></h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item glass">
+        <div class="faq-q">Is Master Of Binary free to join? <span class="plus"></span></div>
+        <div class="faq-a"><p>Yes. The core Telegram community and daily market breakdowns are free to access — just tap "Join Telegram" to request entry.</p></div>
+      </div>
+      <div class="faq-item glass">
+        <div class="faq-q">What broker do the setups reference? <span class="plus"></span></div>
+        <div class="faq-a"><p>Our breakdowns are built around the pairs and OTC assets commonly available on Quotex, but the technical analysis principles we share apply broadly.</p></div>
+      </div>
+      <div class="faq-item glass">
+        <div class="faq-q">Are results guaranteed? <span class="plus"></span></div>
+        <div class="faq-a"><p>No. Trading, and binary options in particular, carries a high level of risk and no outcome can be guaranteed. Our content is educational and informational, not financial advice, and every trader is responsible for their own decisions.</p></div>
+      </div>
+      <div class="faq-item glass">
+        <div class="faq-q">Do I need experience to join? <span class="plus"></span></div>
+        <div class="faq-a"><p>No. We welcome traders at every level. Our pinned onboarding guide walks new members through how to read our breakdowns and terminology.</p></div>
+      </div>
+      <div class="faq-item glass">
+        <div class="faq-q">How often are setups shared? <span class="plus"></span></div>
+        <div class="faq-a"><p>We aim to cover major sessions throughout the day and post a structure breakdown whenever conditions meet our internal criteria — not on a fixed schedule.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CTA BANNER ============================ -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="cta-banner neon-border reveal">
+      <div class="cta-glow"></div>
+      <span class="eyebrow">Ready When You Are</span>
+      <h2>Join the community <span>today</span></h2>
+      <p>Get access to daily market breakdowns, technical analysis and a community of Quotex traders — all in one Telegram channel.</p>
+      <a href="https://telegram.me/+gxtCXAjKGbAxZTk0" target="_blank" rel="noopener" class="btn btn-primary js-ripple">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none"><path d="M21 4L2.5 11.5c-1 .4-1 1.6.1 1.9l4.4 1.4 1.7 5.4c.3 1 1.6 1.2 2.2.4l2.6-3.2 4.6 3.4c.9.6 2.1.1 2.3-.9L23 5.2c.2-1-.9-1.7-1.9-1.2z" fill="currentColor"/></svg>
+        Join Telegram Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none"><path d="M4 18l5-6 4 3 7-9" stroke="#00E676" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="brand-name">Master <b>Of Binary</b></span>
+        </a>
+        <p>A professional Telegram community for Quotex traders, sharing technical analysis, market structure breakdowns and trade setups.</p>
+        <div class="social-row">
+          <a href="https://telegram.me/+gxtCXAjKGbAxZTk0" target="_blank" rel="noopener" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 4L2.5 11.5c-1 .4-1 1.6.1 1.9l4.4 1.4 1.7 5.4c.3 1 1.6 1.2 2.2.4l2.6-3.2 4.6 3.4c.9.6 2.1.1 2.3-.9L23 5.2c.2-1-.9-1.7-1.9-1.2z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#analysis">Market Analysis</a></li>
+          <li><a href="#performance">Performance</a></li>
+          <li><a href="#how">How It Works</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Community</h5>
+        <ul>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="https://telegram.me/+gxtCXAjKGbAxZTk0" target="_blank" rel="noopener">Join Telegram</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Risk Disclosure</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Master Of Binary. All rights reserved.</p>
+      <div class="legal">
+        <a href="#">Risk Disclosure</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+    <p class="risk-note">Risk Disclosure: Binary options and OTC trading carry a high level of risk and may not be suitable for all traders. Content shared by Master Of Binary is for educational and informational purposes only and does not constitute financial advice. Past performance and illustrative examples are not indicative of future results. Trade only with capital you can afford to lose.</p>
+  </div>
+</footer>
+
+<script>
+/* ==========================================================================
+   0. LOADER
+   ========================================================================== */
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  setTimeout(() => loader.classList.add('hidden'), 400);
+});
+
+/* ==========================================================================
+   1. NAVBAR SCROLL + MOBILE MENU
+   ========================================================================== */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 30);
+}, { passive:true });
+
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('active');
+  mobileMenu.classList.toggle('open');
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  burger.classList.remove('active'); mobileMenu.classList.remove('open');
+}));
+
+/* ==========================================================================
+   2. SCROLL REVEAL
+   ========================================================================== */
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      entry.target.classList.add('in');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold:.15 });
+revealEls.forEach(el => revealObserver.observe(el));
+
+/* ==========================================================================
+   3. COUNTER ANIMATION
+   ========================================================================== */
+function animateCounter(el){
+  const target = parseFloat(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  function tick(now){
+    const p = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    const val = Math.floor(eased * target);
+    el.textContent = val.toLocaleString() + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+    else el.textContent = target.toLocaleString() + suffix;
+  }
+  requestAnimationFrame(tick);
+}
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      animateCounter(entry.target);
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold:.5 });
+document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+/* ==========================================================================
+   4. PROGRESS BARS
+   ========================================================================== */
+const progressObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      entry.target.style.width = entry.target.dataset.width;
+      progressObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold:.4 });
+document.querySelectorAll('.progress-fill').forEach(el => progressObserver.observe(el));
+
+/* ==========================================================================
+   5. RIPPLE BUTTON EFFECT
+   ========================================================================== */
+document.querySelectorAll('.js-ripple').forEach(btn => {
+  btn.addEventListener('click', function(e){
+    const rect = this.getBoundingClientRect();
+    const ripple = document.createElement('span');
+    const size = Math.max(rect.width, rect.height);
+    ripple.className = 'ripple';
+    ripple.style.width = ripple.style.height = size + 'px';
+    ripple.style.left = (e.clientX - rect.left - size/2) + 'px';
+    ripple.style.top = (e.clientY - rect.top - size/2) + 'px';
+    this.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 650);
+  });
+});
+
+/* ==========================================================================
+   6. MOUSE GLOW
+   ========================================================================== */
+const glow = document.getElementById('mouseGlow');
+let glowVisible = false;
+window.addEventListener('mousemove', (e) => {
+  glow.style.left = e.clientX + 'px';
+  glow.style.top = e.clientY + 'px';
+  if (!glowVisible){ glow.style.opacity = '1'; glowVisible = true; }
+});
+window.addEventListener('mouseleave', () => { glow.style.opacity = '0'; glowVisible = false; });
+
+/* ==========================================================================
+   7. FAQ ACCORDION
+   ========================================================================== */
+document.querySelectorAll('.faq-item').forEach(item => {
+  const q = item.querySelector('.faq-q');
+  const a = item.querySelector('.faq-a');
+  q.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(other => {
+      if (other !== item){ other.classList.remove('open'); other.querySelector('.faq-a').style.maxHeight = null; }
+    });
+    item.classList.toggle('open');
+    a.style.maxHeight = isOpen ? null : a.scrollHeight + 'px';
+  });
+});
+
+/* ==========================================================================
+   8. MARKET TABS
+   ========================================================================== */
+document.querySelectorAll('.m-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.m-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    drawAnalysisChart();
+  });
+});
+</script>
+
+<script>
+/* ==========================================================================
+   9. ANIMATED CANDLESTICK CHART (hero dashboard)
+   ========================================================================== */
+const candleCanvas = document.getElementById('candles-canvas');
+const cctx = candleCanvas.getContext('2d');
+let candles = [];
+let basePrice = 1.08452;
+
+function seedCandles(){
+  candles = [];
+  let p = basePrice;
+  for (let i = 0; i < 40; i++){
+    const open = p;
+    const change = (Math.random() - 0.48) * 0.0016;
+    const close = open + change;
+    const high = Math.max(open, close) + Math.random() * 0.0009;
+    const low = Math.min(open, close) - Math.random() * 0.0009;
+    candles.push({ open, close, high, low });
+    p = close;
+  }
+}
+seedCandles();
+
+function resizeCandleCanvas(){
+  const rect = candleCanvas.parentElement.getBoundingClientRect();
+  candleCanvas.width = rect.width * devicePixelRatio;
+  candleCanvas.height = rect.height * devicePixelRatio;
+  candleCanvas.style.width = rect.width + 'px';
+  candleCanvas.style.height = rect.height + 'px';
+  cctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+}
+
+function drawCandles(){
+  const rect = candleCanvas.parentElement.getBoundingClientRect();
+  const w = rect.width, h = rect.height;
+  cctx.clearRect(0, 0, w, h);
+
+  const prices = candles.flatMap(c => [c.high, c.low]);
+  const max = Math.max(...prices), min = Math.min(...prices);
+  const pad = (max - min) * 0.15 || 0.001;
+  const yMax = max + pad, yMin = min - pad;
+
+  const slot = w / candles.length;
+  const bodyW = Math.max(slot * 0.45, 2);
+
+  candles.forEach((c, i) => {
+    const x = i * slot + slot / 2;
+    const yOpen = h - ((c.open - yMin) / (yMax - yMin)) * h;
+    const yClose = h - ((c.close - yMin) / (yMax - yMin)) * h;
+    const yHigh = h - ((c.high - yMin) / (yMax - yMin)) * h;
+    const yLow = h - ((c.low - yMin) / (yMax - yMin)) * h;
+    const bullish = c.close >= c.open;
+    const color = bullish ? '#00E676' : '#FF4D6D';
+
+    cctx.strokeStyle = color;
+    cctx.lineWidth = 1.2;
+    cctx.beginPath();
+    cctx.moveTo(x, yHigh);
+    cctx.lineTo(x, yLow);
+    cctx.stroke();
+
+    cctx.fillStyle = color;
+    const top = Math.min(yOpen, yClose);
+    const bh = Math.max(Math.abs(yClose - yOpen), 1.5);
+    cctx.fillRect(x - bodyW/2, top, bodyW, bh);
+  });
+}
+
+function tickCandles(){
+  candles.shift();
+  const last = candles[candles.length - 1];
+  const open = last.close;
+  const change = (Math.random() - 0.48) * 0.0016;
+  const close = open + change;
+  const high = Math.max(open, close) + Math.random() * 0.0009;
+  const low = Math.min(open, close) - Math.random() * 0.0009;
+  candles.push({ open, close, high, low });
+
+  const priceEl = document.getElementById('livePrice');
+  const changeEl = document.getElementById('liveChange');
+  if (priceEl){
+    priceEl.textContent = close.toFixed(5);
+    const pct = ((close - basePrice) / basePrice * 100);
+    changeEl.textContent = (pct >= 0 ? '+' : '') + pct.toFixed(2) + '%';
+    changeEl.style.color = pct >= 0 ? 'var(--primary)' : 'var(--danger)';
+  }
+  drawCandles();
+}
+
+resizeCandleCanvas();
+drawCandles();
+setInterval(tickCandles, 1400);
+window.addEventListener('resize', () => { resizeCandleCanvas(); drawCandles(); });
+
+/* ==========================================================================
+   10. PARTICLE SYSTEM (background)
+   ========================================================================== */
+const pCanvas = document.getElementById('particles-canvas');
+const pctx = pCanvas.getContext('2d');
+let particles = [];
+
+function resizeParticleCanvas(){
+  pCanvas.width = window.innerWidth;
+  pCanvas.height = window.innerHeight;
+}
+resizeParticleCanvas();
+window.addEventListener('resize', resizeParticleCanvas);
+
+const colors = ['#00E676', '#00C2FF', '#9C6BFF'];
+function initParticles(){
+  particles = [];
+  const count = Math.min(70, Math.floor(window.innerWidth / 22));
+  for (let i = 0; i < count; i++){
+    particles.push({
+      x: Math.random() * pCanvas.width,
+      y: Math.random() * pCanvas.height,
+      r: Math.random() * 1.6 + .6,
+      vx: (Math.random() - .5) * .25,
+      vy: (Math.random() - .5) * .25,
+      c: colors[Math.floor(Math.random() * colors.length)],
+      a: Math.random() * .5 + .2
+    });
+  }
+}
+initParticles();
+
+function drawParticles(){
+  pctx.clearRect(0, 0, pCanvas.width, pCanvas.height);
+  particles.forEach(p => {
+    p.x += p.vx; p.y += p.vy;
+    if (p.x < 0) p.x = pCanvas.width; if (p.x > pCanvas.width) p.x = 0;
+    if (p.y < 0) p.y = pCanvas.height; if (p.y > pCanvas.height) p.y = 0;
+    pctx.beginPath();
+    pctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    pctx.fillStyle = p.c;
+    pctx.globalAlpha = p.a;
+    pctx.fill();
+  });
+  pctx.globalAlpha = 1;
+  requestAnimationFrame(drawParticles);
+}
+drawParticles();
+</script>
+
+<script>
+/* ==========================================================================
+   11. TICKER STRIP CONTENT
+   ========================================================================== */
+const tickerPairs = [
+  { p:'EUR/USD', v:'1.08452', c:'+0.14%', up:true },
+  { p:'GBP/JPY', v:'198.234', c:'-0.22%', up:false },
+  { p:'BTC/USD', v:'64,182', c:'+1.85%', up:true },
+  { p:'AUD/CAD', v:'0.9021', c:'+0.06%', up:true },
+  { p:'USD/CHF', v:'0.8843', c:'-0.11%', up:false },
+  { p:'NZD/USD', v:'0.6012', c:'+0.09%', up:true },
+  { p:'ETH/USD', v:'3,412', c:'+2.10%', up:true },
+  { p:'USD/JPY', v:'156.88', c:'-0.05%', up:false }
+];
+function buildTicker(){
+  const track = document.getElementById('tickerTrack');
+  let html = '';
+  for (let rep = 0; rep < 2; rep++){
+    tickerPairs.forEach(t => {
+      html += `<div class="ticker-item"><b>${t.p}</b> ${t.v} <span class="${t.up ? 'up' : 'down'}">${t.c}</span></div>`;
+    });
+  }
+  track.innerHTML = html;
+}
+buildTicker();
+
+/* ==========================================================================
+   12. HERO SVG TREND LINE (overlays candlestick chart)
+   ========================================================================== */
+function drawHeroLine(){
+  const svg = document.getElementById('chart-line-svg');
+  const pointCount = 24;
+  let d = '';
+  let y = 130;
+  const pts = [];
+  for (let i = 0; i < pointCount; i++){
+    y += (Math.random() - 0.5) * 22;
+    y = Math.max(30, Math.min(210, y));
+    const x = (i / (pointCount - 1)) * 600;
+    pts.push([x, y]);
+  }
+  d = pts.map((pt, i) => (i === 0 ? 'M' : 'L') + pt[0].toFixed(1) + ',' + pt[1].toFixed(1)).join(' ');
+  svg.innerHTML = `
+    <defs>
+      <linearGradient id="lineGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#00E676" stop-opacity=".5"/>
+        <stop offset="100%" stop-color="#00E676" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path d="${d} L600,240 L0,240 Z" fill="url(#lineGrad)" opacity=".4"/>
+    <path d="${d}" fill="none" stroke="#00E676" stroke-width="1.6" opacity=".55" stroke-linecap="round"/>
+  `;
+}
+drawHeroLine();
+setInterval(drawHeroLine, 4200);
+
+/* ==========================================================================
+   13. MARKET ANALYSIS SVG CHART
+   ========================================================================== */
+function generateSeries(n, volatility){
+  let v = 150 + Math.random() * 40;
+  const arr = [];
+  for (let i = 0; i < n; i++){
+    v += (Math.random() - 0.5) * volatility;
+    v = Math.max(40, Math.min(300, v));
+    arr.push(v);
+  }
+  return arr;
+}
+function drawAnalysisChart(){
+  const svg = document.getElementById('analysis-svg');
+  const w = 1000, h = 340;
+  const series = generateSeries(50, 14);
+  const max = Math.max(...series), min = Math.min(...series);
+  const pts = series.map((v, i) => {
+    const x = (i / (series.length - 1)) * w;
+    const y = h - ((v - min) / (max - min || 1)) * (h - 40) - 20;
+    return [x, y];
+  });
+  const linePath = pts.map((p, i) => (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
+  const areaPath = linePath + ` L${w},${h} L0,${h} Z`;
+
+  let gridLines = '';
+  for (let i = 0; i <= 4; i++){
+    const y = (h / 4) * i;
+    gridLines += `<line x1="0" y1="${y}" x2="${w}" y2="${y}" stroke="rgba(181,194,212,.08)" stroke-width="1"/>`;
+  }
+
+  const dotIndex = pts.length - 1;
+  svg.innerHTML = `
+    <defs>
+      <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#00E676" stop-opacity=".35"/>
+        <stop offset="100%" stop-color="#00E676" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    ${gridLines}
+    <path class="chart-area" d="${areaPath}" fill="url(#areaGrad)"/>
+    <path class="chart-path" d="${linePath}"/>
+    <circle class="chart-dot" cx="${pts[dotIndex][0]}" cy="${pts[dotIndex][1]}" r="5"/>
+  `;
+}
+drawAnalysisChart();
+
+/* ==========================================================================
+   14. MINI PERFORMANCE CHARTS
+   ========================================================================== */
+function drawMiniCharts(){
+  document.querySelectorAll('.mini-chart-svg').forEach(svg => {
+    const w = 300, h = 70;
+    const series = generateSeries(18, 12);
+    const max = Math.max(...series), min = Math.min(...series);
+    const pts = series.map((v, i) => {
+      const x = (i / (series.length - 1)) * w;
+      const y = h - ((v - min) / (max - min || 1)) * (h - 10) - 5;
+      return [x, y];
+    });
+    const linePath = pts.map((p, i) => (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
+    const areaPath = linePath + ` L${w},${h} L0,${h} Z`;
+    svg.innerHTML = `
+      <defs><linearGradient id="mg-${Math.random().toString(36).slice(2)}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#00C2FF" stop-opacity=".35"/><stop offset="100%" stop-color="#00C2FF" stop-opacity="0"/>
+      </linearGradient></defs>
+      <path d="${areaPath}" fill="rgba(0,194,255,.15)"/>
+      <path d="${linePath}" fill="none" stroke="#00C2FF" stroke-width="2" stroke-linecap="round"/>
+    `;
+  });
+}
+drawMiniCharts();
+</script>
+</body>
+</html>
